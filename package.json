@@ -18,7 +18,8 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"browser": "./dist/browser.js",
+			"default": "./dist/index.js"
 		}
 	},
 	"files": [
@@ -27,7 +28,8 @@
 		"!dist/**/*.spec.*"
 	],
 	"peerDependencies": {
-		"svelte": "^5.0.0-next.1"
+		"svelte": "^3.0.0 || ^4.0.0 || ^5.0.0-next.1",
+		"@sveltejs/kit": "^1.0.0 || ^2.0.0"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -36,6 +38,7 @@
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^8.56.0",
+		"@types/node": "^20.12.11",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
 		"eslint": "^8.56.0",
@@ -53,5 +56,8 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"devalue": "^5.0.0"
+	}
 }
