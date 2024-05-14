@@ -18,20 +18,6 @@ This is generally not a problem but it can become a problem if the functions inv
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/paoloricciuti/teleport-kit)
 
-## Contributing
-
-Contributions are always welcome!
-
-For the moment there's no code of conduct neither a contributing guideline but if you found a problem or have an idea feel free to [open an issue](https://github.com/paoloricciuti/teleport-kit/issues/new)
-
-If you want the fastest way to open a PR try out Codeflow
-
-[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://pr.new/paoloricciuti/teleport-kit/)
-
-## Authors
-
-- [@paoloricciuti](https://www.github.com/paoloricciuti)
-
 ## Installation
 
 Install teleport-kit with npm
@@ -92,3 +78,17 @@ I know you are curious!
 5. the already served value is deleted from the script tag to avoid serving the same value if the component is unmounted and remounted.
 
 And that's it!
+
+## Contributing
+
+Contributions are always welcome!
+
+For the moment there's no code of conduct neither a contributing guideline but if you found a problem or have an idea feel free to [open an issue](https://github.com/paoloricciuti/teleport-kit/issues/new)
+
+If you want the fastest way to open a PR try out Codeflow
+
+[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://pr.new/paoloricciuti/teleport-kit/)
+
+## Authors
+
+- [@paoloricciuti](https://www.github.com/paoloricciuti)
