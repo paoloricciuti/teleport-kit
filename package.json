@@ -4,7 +4,9 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"build:playground": "cd playground && pnpm build",
 		"preview": "vite preview",
+		"preview:playground": "cd playground && pnpm preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
 		"test": "pnpm test:integration",
@@ -61,7 +63,6 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"devalue": "^5.0.0",
-		"teleport-kit": "link:"
+		"devalue": "^5.0.0"
 	}
 }
