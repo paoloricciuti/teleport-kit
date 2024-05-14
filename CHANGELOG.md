@@ -1,5 +1,11 @@
 # teleport-kit
 
+## 0.0.3
+
+### Patch Changes
+
+- e0f8ae9: fix: publish workflow
+
 ## 0.0.2
 
 ### Patch Changes
