@@ -11,6 +11,9 @@ importers:
       devalue:
         specifier: ^5.0.0
         version: 5.0.0
+      teleport-kit:
+        specifier: 'link:'
+        version: 'link:'
     devDependencies:
       '@changesets/cli':
         specifier: ^2.27.1

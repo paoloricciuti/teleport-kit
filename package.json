@@ -3,11 +3,11 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run package",
+		"build": "vite build",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
-		"test": "npm run test:integration && npm run test:unit",
+		"test": "pnpm test:integration",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
@@ -15,7 +15,7 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"changeset": "changeset",
-		"release": "pnpm run build && changeset publish"
+		"release": "pnpm run package && changeset publish"
 	},
 	"exports": {
 		".": {
@@ -61,6 +61,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"devalue": "^5.0.0"
+		"devalue": "^5.0.0",
+		"teleport-kit": "link:"
 	}
 }
