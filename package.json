@@ -4,9 +4,9 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"build:playground": "cd playground && pnpm build",
+		"build:playground": "cd playground && pnpm install --frozen-lockfile && pnpm build",
 		"preview": "vite preview",
-		"preview:playground": "cd playground && pnpm preview",
+		"preview:playground": "cd playground && pnpm install --frozen-lockfile && pnpm preview",
 		"package": "svelte-kit sync && svelte-package && publint",
 		"prepublishOnly": "npm run package",
 		"test": "pnpm test:integration",
