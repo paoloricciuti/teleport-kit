@@ -78,3 +78,17 @@ as you can see there's another small catch to use this library: you need to prov
 
 - the same on the server and on the client
 - unique for your whole route (this means every teleported variable including the ones in child layouts and components)
+
+It's also important that the value you return is serializable by [`devalue`](https://github.com/Rich-Harris/devalue) (it's the same serialization library Svelte-kit uses...if you can return it from a server load function you can teleport it with `teleport-kit`!)
+
+## How it works?
+
+I know you are curious!
+
+1. The handle function that you exports from `hooks.server.ts` wrap your whole Svelte-kit application in an `AsyncLocalStorage` so that every request will have it's own context.
+2. Through the use of esm exports the `teleport` function that you execute on the server will update the storage assigning a property based on the name you provide with the value returned from your function and will return the value itself.
+3. After the request is resolved in the server hook the html is transformed to append a small `<script>` tag containing the teleported values.
+4. On the client the `teleport` function (different from the one on the server thanks to esm exports) will read the content of the aforementioned script tag and return the value present there instead of calling the function. If no value is found the function is called and the value returned.
+5. the already served value is deleted from the script tag to avoid serving the same value if the component is unmounted and remounted.
+
+And that's it!
