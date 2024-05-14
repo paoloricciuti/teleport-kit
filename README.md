@@ -1,58 +1,80 @@
-# create-svelte
+# teleport-kit
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+The current web-development world pride itself of blurring the line between backend and frontend and this is mostly done throw a process known as hydration. Your components are executed on the server and the html document is sent with all the information already in it. Later on components are re-executed on the client and listeners are attached to the elements to allow for a reactive environment without the need of a full page reload.
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+This is generally not a problem but it can become a problem if the functions invoked are non deterministic. An example of this could be `Math.random()` or `crypto.randomUUID` or even simpler `new Date()`. Between the two executions (the server and the client) those two values could (and most likely will) change creating in the best case a random flicker in the UI, in the worst an hydration mismatch (even tho Svelte is pretty good at dealing with those 😎)
 
-## Creating a project
+`teleport-kit` aim to solve this issue allowing you to specify variables that will be initialized with a value on the server and will have the same value once hydrated on the client!
 
-If you're seeing this, you've probably already done this step. Congrats!
+> **Warning**
+>
+> This package is meant to be used with Svelte-Kit as the name suggest. Because it uses api that are **only** present in Svelte-Kit it will not work in your normal svelte project.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+![npm](https://img.shields.io/npm/v/teleport-kit)
 
-## Developing
+![npm](https://img.shields.io/npm/dt/teleport-kit)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+![GitHub last commit](https://img.shields.io/github/last-commit/paoloricciuti/teleport-kit)
 
-```bash
-npm run dev
+## Contributing
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Contributions are always welcome!
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+For the moment there's no code of conduct neither a contributing guideline but if you found a problem or have an idea feel free to [open an issue](https://github.com/paoloricciuti/teleport-kit/issues/new)
 
-## Building
+If you want the fastest way to open a PR try out Codeflow
 
-To build your library:
+[![Open in Codeflow](https://developer.stackblitz.com/img/open_in_codeflow.svg)](https://pr.new/paoloricciuti/teleport-kit/)
 
-```bash
-npm run package
-```
+## Authors
 
-To create a production version of your showcase app:
+- [@paoloricciuti](https://www.github.com/paoloricciuti)
+
+## Installation
+
+Install teleport-kit with npm
 
 ```bash
-npm run build
+  npm install teleport-kit@latest
 ```
 
-You can preview the production build with `npm run preview`.
+## Setup
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+After the installation of `teleport-kit` you need to do an extra step to allow the library to work for you: create or update your `hooks.server.ts` file.
 
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
+```ts
+export { handle } from 'teleport-kit';
 ```
+
+if you already have another server handle already in your project you can make use of the `sequence` helper from Sveltekit ([link to docs](https://kit.svelte.dev/docs/modules#sveltejs-kit-hooks-sequence))
+
+```ts
+import { sequence } from '@sveltejs/kit/hooks';
+import { handle as teleportkit } from 'teleport-kit';
+
+export const handle = sequence(teleportkit, ({ event, resolve }) => {
+	// your logic here
+	return resolve(event);
+});
+```
+
+## Usage/Examples
+
+Once you've done with this setup you can start using the `teleport` function inside your svelte components
+
+```svelte
+<script lang="ts">
+	import { teleport } from 'teleport-kit';
+
+	let random = teleport('random', () => Math.random());
+</script>
+
+My random value: {random}
+```
+
+as you can see there's another small catch to use this library: you need to provide a unique name for your teleported variable in the form of the first argument of the `teleport` function. Is important that this name is:
+
+- the same on the server and on the client
+- unique for your whole route (this means every teleported variable including the ones in child layouts and components)
