@@ -20,16 +20,16 @@ importers:
         version: 1.48.0
       '@sveltejs/adapter-auto':
         specifier: ^3.2.0
-        version: 3.2.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))
+        version: 3.2.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))
       '@sveltejs/kit':
         specifier: ^2.5.8
-        version: 2.5.8(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
+        version: 2.5.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
       '@sveltejs/package':
         specifier: ^2.3.1
         version: 2.3.1(svelte@5.5.0)(typescript@5.4.5)
       '@sveltejs/vite-plugin-svelte':
-        specifier: 5.0.2
-        version: 5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
+        specifier: 5.0.3
+        version: 5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
       '@types/eslint':
         specifier: ^9.0.0
         version: 9.6.0
@@ -722,8 +722,8 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
 
-  '@sveltejs/vite-plugin-svelte@5.0.2':
-    resolution: {integrity: sha512-GElAxQMlznx1pRdodtkmiyBZcjlaJntJ8APa2hBhnbUAJqKAFGdmwjRPJhh+2DMxwARRLBzQIs/iZ5EbR4X/og==}
+  '@sveltejs/vite-plugin-svelte@5.0.3':
+    resolution: {integrity: sha512-MCFS6CrQDu1yGwspm4qtli0e63vaPCehf6V7pIMP15AsWgMKrqDGCPFF/0kn4SP0ii4aySu4Pa62+fIRGFMjgw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22}
     peerDependencies:
       svelte: ^5.0.0
@@ -1055,15 +1055,6 @@ packages:
 
   debug@4.3.5:
     resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
-  debug@4.3.7:
-    resolution: {integrity: sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==}
     engines: {node: '>=6.0'}
     peerDependencies:
       supports-color: '*'
@@ -2908,7 +2899,7 @@ snapshots:
   '@eslint/config-array@0.17.1':
     dependencies:
       '@eslint/object-schema': 2.1.4
-      debug: 4.3.7
+      debug: 4.4.0
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -2916,7 +2907,7 @@ snapshots:
   '@eslint/eslintrc@3.1.0':
     dependencies:
       ajv: 6.12.6
-      debug: 4.3.7
+      debug: 4.4.0
       espree: 10.1.0
       globals: 14.0.0
       ignore: 5.3.1
@@ -3096,14 +3087,14 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
-  '@sveltejs/adapter-auto@3.2.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))':
+  '@sveltejs/adapter-auto@3.2.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))':
     dependencies:
-      '@sveltejs/kit': 2.5.8(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
+      '@sveltejs/kit': 2.5.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))':
+  '@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
+      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.0.0
@@ -3130,18 +3121,18 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))':
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
+      '@sveltejs/vite-plugin-svelte': 5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
       debug: 4.4.0
       svelte: 5.5.0
       vite: 6.0.1(@types/node@22.8.2)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))':
+  '@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.2(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2)))(svelte@5.5.0)(vite@6.0.1(@types/node@22.8.2))
       debug: 4.4.0
       deepmerge: 4.3.1
       kleur: 4.1.5
@@ -3267,7 +3258,7 @@ snapshots:
 
   '@vitest/snapshot@2.0.0':
     dependencies:
-      magic-string: 0.30.14
+      magic-string: 0.30.15
       pathe: 1.1.2
       pretty-format: 29.7.0
 
@@ -3525,10 +3516,6 @@ snapshots:
   debug@4.3.5:
     dependencies:
       ms: 2.1.2
-
-  debug@4.3.7:
-    dependencies:
-      ms: 2.1.3
 
   debug@4.4.0:
     dependencies:
@@ -4976,7 +4963,7 @@ snapshots:
   vite-node@2.0.0(@types/node@22.8.2):
     dependencies:
       cac: 6.7.14
-      debug: 4.3.7
+      debug: 4.4.0
       pathe: 1.1.2
       picocolors: 1.0.1
       vite: 5.2.11(@types/node@22.8.2)
