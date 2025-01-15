@@ -45,7 +45,7 @@
 		"@types/eslint": "^9.0.0",
 		"@types/node": "^22.0.0",
 		"eslint": "^9.7.0",
-		"eslint-config-prettier": "^9.1.0",
+		"eslint-config-prettier": "^10.0.0",
 		"eslint-plugin-svelte": "^2.39.0",
 		"globals": "^15.8.0",
 		"prettier": "^3.2.5",
