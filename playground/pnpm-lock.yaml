@@ -14,19 +14,19 @@ importers:
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^6.0.0
-        version: 6.0.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1))
+        version: 6.0.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1))
       '@sveltejs/kit':
         specifier: ^2.5.8
-        version: 2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1)
+        version: 2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1)
       '@sveltejs/vite-plugin-svelte':
         specifier: ^5.0.0
-        version: 5.0.1(svelte@5.35.2)(vite@6.0.1)
+        version: 5.0.1(svelte@5.45.2)(vite@6.0.1)
       svelte:
-        specifier: 5.35.2
-        version: 5.35.2
+        specifier: 5.45.2
+        version: 5.45.2
       svelte-check:
         specifier: ^4.0.0
-        version: 4.0.0(svelte@5.35.2)(typescript@5.4.5)
+        version: 4.0.0(svelte@5.45.2)(typescript@5.4.5)
       tslib:
         specifier: ^2.6.2
         version: 2.6.2
@@ -38,10 +38,6 @@ importers:
         version: 6.0.1
 
 packages:
-
-  '@ampproject/remapping@2.3.0':
-    resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
-    engines: {node: '>=6.0.0'}
 
   '@esbuild/aix-ppc64@0.24.0':
     resolution: {integrity: sha512-WtKdFM7ls47zkKHFVzMz8opM7LkcsIp9amDUBIAWirg70RM71WRSjdILPsY5Uv1D42ZpUfaPILDlfactHgsRkw==}
@@ -190,6 +186,9 @@ packages:
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
     engines: {node: '>=6.0.0'}
+
+  '@jridgewell/remapping@2.3.5':
+    resolution: {integrity: sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==}
 
   '@jridgewell/resolve-uri@3.1.2':
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
@@ -391,6 +390,9 @@ packages:
   devalue@5.0.0:
     resolution: {integrity: sha512-gO+/OMXF7488D+u3ue+G7Y4AA3ZmUnB3eHJXmBTgNHvr4ZNzl36A0ZtG+XCRNYCkYx/bFmw4qtkoFLa+wSrwAA==}
 
+  devalue@5.5.0:
+    resolution: {integrity: sha512-69sM5yrHfFLJt0AZ9QqZXGCPfJ7fQjvpln3Rq5+PS03LD32Ost1Q9N+eEnaQwGRIriKkMImXD56ocjQmfjbV3w==}
+
   esbuild@0.24.0:
     resolution: {integrity: sha512-FuLPevChGDshgSicjisSooU0cemp/sGXR841D5LHMB7mTVOmsEHcAxaH3irL53+8YDIeVNQEySh4DaYU/iuPqQ==}
     engines: {node: '>=18'}
@@ -402,8 +404,8 @@ packages:
   esm-env@1.2.1:
     resolution: {integrity: sha512-U9JedYYjCnadUlXk7e1Kr+aENQhtUaoaV9+gZm1T8LC/YBAPJx3NSPIAurFOC0U5vrdSevnUJS2/wUVxGwPhng==}
 
-  esrap@2.1.0:
-    resolution: {integrity: sha512-yzmPNpl7TBbMRC5Lj2JlJZNPml0tzqoqP5B1JXycNUwtqma9AKCO0M2wHrdgsHcy1WRW7S9rJknAMtByg3usgA==}
+  esrap@2.2.0:
+    resolution: {integrity: sha512-WBmtxe7R9C5mvL4n2le8nMUe4mD5V9oiK2vJpQ9I3y20ENPUomPcphBXE8D1x/Bm84oN1V+lOfgXxtqmxTp3Xg==}
 
   fdir@6.3.0:
     resolution: {integrity: sha512-QOnuT+BOtivR77wYvCWHfGt9s4Pz1VIMbD463vegT5MLqNXy8rYFT/lPVEqf/bhYeT6qmqrNHhsX+rWwe3rOCQ==}
@@ -533,8 +535,8 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
 
-  svelte@5.35.2:
-    resolution: {integrity: sha512-uW/rRXYrhZ7Dh4UQNZ0t+oVGL1dEM+95GavCO8afAk1IY2cPq9BcZv9C3um5aLIya2y8lIeLPxLII9ASGg9Dzw==}
+  svelte@5.45.2:
+    resolution: {integrity: sha512-yyXdW2u3H0H/zxxWoGwJoQlRgaSJLp+Vhktv12iRw2WRDlKqUPT54Fi0K/PkXqrdkcQ98aBazpy0AH4BCBVfoA==}
     engines: {node: '>=18'}
 
   tiny-glob@0.2.9:
@@ -608,11 +610,6 @@ packages:
     resolution: {integrity: sha512-rAbqEGa8ovJy4pyBxZM70hg4pE6gDgaQ0Sl9M3enG3I0d6H4XSAM3GeNGLKnsBpuijUow064sf7ww1nutC5/3w==}
 
 snapshots:
-
-  '@ampproject/remapping@2.3.0':
-    dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.25
 
   '@esbuild/aix-ppc64@0.24.0':
     optional: true
@@ -692,6 +689,11 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@jridgewell/remapping@2.3.5':
+    dependencies:
+      '@jridgewell/gen-mapping': 0.3.5
+      '@jridgewell/trace-mapping': 0.3.25
+
   '@jridgewell/resolve-uri@3.1.2': {}
 
   '@jridgewell/set-array@1.2.1': {}
@@ -763,14 +765,14 @@ snapshots:
     dependencies:
       acorn: 8.12.1
 
-  '@sveltejs/adapter-auto@6.0.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1))':
+  '@sveltejs/adapter-auto@6.0.0(@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1))':
     dependencies:
-      '@sveltejs/kit': 2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1)
+      '@sveltejs/kit': 2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1)
       import-meta-resolve: 4.1.0
 
-  '@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1)':
+  '@sveltejs/kit@2.5.8(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1)':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.1(svelte@5.35.2)(vite@6.0.1)
+      '@sveltejs/vite-plugin-svelte': 5.0.1(svelte@5.45.2)(vite@6.0.1)
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.0.0
@@ -782,27 +784,27 @@ snapshots:
       sade: 1.8.1
       set-cookie-parser: 2.6.0
       sirv: 2.0.4
-      svelte: 5.35.2
+      svelte: 5.45.2
       tiny-glob: 0.2.9
       vite: 6.0.1
 
-  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1)':
+  '@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1)':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.0.1(svelte@5.35.2)(vite@6.0.1)
+      '@sveltejs/vite-plugin-svelte': 5.0.1(svelte@5.45.2)(vite@6.0.1)
       debug: 4.3.7
-      svelte: 5.35.2
+      svelte: 5.45.2
       vite: 6.0.1
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1)':
+  '@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1)':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.35.2)(vite@6.0.1))(svelte@5.35.2)(vite@6.0.1)
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.45.2)(vite@6.0.1))(svelte@5.45.2)(vite@6.0.1)
       debug: 4.3.7
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.14
-      svelte: 5.35.2
+      svelte: 5.45.2
       vite: 6.0.1
       vitefu: 1.0.3(vite@6.0.1)
     transitivePeerDependencies:
@@ -853,6 +855,8 @@ snapshots:
 
   devalue@5.0.0: {}
 
+  devalue@5.5.0: {}
+
   esbuild@0.24.0:
     optionalDependencies:
       '@esbuild/aix-ppc64': 0.24.0
@@ -884,7 +888,7 @@ snapshots:
 
   esm-env@1.2.1: {}
 
-  esrap@2.1.0:
+  esrap@2.2.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
@@ -999,21 +1003,21 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  svelte-check@4.0.0(svelte@5.35.2)(typescript@5.4.5):
+  svelte-check@4.0.0(svelte@5.45.2)(typescript@5.4.5):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 3.6.0
       fdir: 6.3.0
       picocolors: 1.0.1
       sade: 1.8.1
-      svelte: 5.35.2
+      svelte: 5.45.2
       typescript: 5.4.5
     transitivePeerDependencies:
       - picomatch
 
-  svelte@5.35.2:
+  svelte@5.45.2:
     dependencies:
-      '@ampproject/remapping': 2.3.0
+      '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.0
       '@sveltejs/acorn-typescript': 1.0.5(acorn@8.12.1)
       '@types/estree': 1.0.6
@@ -1021,8 +1025,9 @@ snapshots:
       aria-query: 5.3.1
       axobject-query: 4.1.0
       clsx: 2.1.1
+      devalue: 5.5.0
       esm-env: 1.2.1
-      esrap: 2.1.0
+      esrap: 2.2.0
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.14
